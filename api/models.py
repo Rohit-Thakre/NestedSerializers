@@ -8,7 +8,12 @@ class Instructor(models.Model):
     def __str__(self) -> str:
         return self.name
     
+    def get_name(self):
+        return self.name
 
+    def get_email(self):
+        return self.email
+    
 class Course(models.Model):
     name = models.CharField(max_length=100)
     rating = models.IntegerField()
@@ -16,3 +21,9 @@ class Course(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def get_name(self):
+        return self.name
+    
+    def get_rating(self):
+        return self.rating
